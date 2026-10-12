@@ -1,0 +1,22 @@
+===== EXAM CHEAT DETECTION REPORT =====
+Session ID          : e27bc258-fc62-432a-9979-f523b62d2470
+Student ID          : 1013
+Student Name        : Shreya Bhuia
+Exam                : Java Programming
+Session Started     : 2026-10-10 15:30:00
+Session Completed   : 2026-10-10 15:31:00
+Questions Attempted : 5 / 5
+Marks Obtained      : 10 / 10
+Tab Switches        : 1
+Copy/Paste Attempts : 1
+Multiple Logins     : 0
+Window Exits        : 0
+Person Detection    : 0 (simulated in this prototype)
+Cheat Score         : 5
+Risk Level          : SUSPICIOUS
+----------- Event Log (chronological) -----------
+1. Tab switch at 2026-10-10 15:30:00 (+2) [Browser extension]
+2. Copy/Paste attempt at 2026-10-10 15:30:00 (+3) [Browser extension]
+-------------------------------------------------
+Note: browser signals are limited and do not prove cheating. They are indicators for review.
+=================================================

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Exam Cheat Detection Monitor",
+  "version": "2.0.0",
+  "description": "Academic demo: take an online exam while browser-observable events (tab switch, window blur, copy/paste) are reported to the backend.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.onrender.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Exam monitor",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

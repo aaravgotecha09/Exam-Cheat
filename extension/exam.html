@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Assessment · Exam Cheat Detection</title>
+<link rel="stylesheet" href="exam.css">
+</head>
+<body>
+<header class="top">
+  <div><h1>Online Assessment Platform</h1><small>Exam Cheat Detection System · NMIMS MPSTME · OOP Mini Project</small></div>
+  <div><span id="backendPill" class="pill">Checking backend…</span> <a href="options.html" target="_blank" class="muted small">Settings</a></div>
+</header>
+
+<main>
+  <section id="screen-register" class="card narrow">
+    <h2>Student registration</h2>
+    <form id="registerForm" novalidate>
+      <label for="studentId">Student ID</label>
+      <input id="studentId" inputmode="numeric" autocomplete="off" placeholder="e.g. 1013">
+      <label for="studentName">Full name</label>
+      <input id="studentName" autocomplete="off" placeholder="e.g. Shreya Bhuia" maxlength="80">
+      <button class="primary full" id="registerBtn">Continue</button>
+      <p class="err" id="registerErr" role="alert"></p>
+    </form>
+    <p class="muted small" id="apiShown"></p>
+  </section>
+
+  <section id="screen-papers" class="hidden">
+    <div class="card">
+      <h2>Choose your test paper</h2>
+      <div id="paperCards" class="papers"><p class="muted">Loading papers…</p></div>
+    </div>
+    <div class="card">
+      <h3>Instructions</h3>
+      <ul class="plain">
+        <li>Each paper has 5 multiple-choice questions worth 2 marks each (10 marks in total).</li>
+        <li>Answer each question once. A saved answer cannot be changed.</li>
+        <li>Keep this tab open and in front. Tab switches, copy/paste attempts and window focus loss are recorded.</li>
+        <li>These signals are indicators only and do not prove cheating.</li>
+        <li>Multiple-person detection is <b>simulated</b> in this prototype.</li>
+      </ul>
+      <div class="row"><button id="backBtn">Back</button><button class="primary" id="startBtn" disabled>Start exam</button></div>
+      <p class="err" id="startErr" role="alert"></p>
+    </div>
+  </section>
+
+  <section id="screen-exam" class="hidden">
+    <div class="layout">
+      <div class="card">
+        <div class="muted" id="examTitle"></div>
+        <div class="bar"><i id="progress"></i></div>
+        <nav id="qNav" class="qnav" aria-label="Questions"></nav>
+        <h2 id="qText"></h2>
+        <div id="options" role="radiogroup"></div>
+        <p class="err" id="examErr" role="alert"></p>
+        <div class="row spread">
+          <button id="prevBtn">Previous</button>
+          <span class="muted" id="qCount"></span>
+          <div><button class="primary" id="saveBtn">Save answer</button> <button id="nextBtn">Next</button></div>
+        </div>
+        <div class="row"><button class="danger" id="submitBtn">Submit exam</button></div>
+      </div>
+      <aside>
+        <div class="card">
+          <h3>Monitoring</h3>
+          <div id="monStatus" class="mon unknown">Starting…</div>
+          <p class="muted" id="monHelp"></p>
+        </div>
+        <div class="card">
+          <h3>Live score</h3>
+          <div class="scoreRow"><div><div class="muted">Cheat score</div><div class="score" id="score">0</div></div><span class="risk NORMAL" id="risk">NORMAL</span></div>
+          <p class="muted small">Calculated by the backend.</p>
+        </div>
+        <div class="card">
+          <h3>Event log</h3>
+          <ul id="eventLog" class="log"><li class="muted">No events yet.</li></ul>
+          <button id="simBtn" class="full" title="Demo only. Real person detection is not implemented.">Simulate multiple person (demo)</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="screen-result" class="card hidden">
+    <h2>Exam submitted</h2>
+    <div class="results">
+      <div><div class="muted">Marks</div><div class="big" id="rMarks"></div></div>
+      <div><div class="muted">Cheat score</div><div class="big" id="rScore"></div></div>
+      <div><div class="muted">Risk level</div><span class="risk" id="rRisk"></span></div>
+    </div>
+    <h3>Answer review</h3>
+    <table><thead><tr><th>#</th><th>Question</th><th>Your answer</th><th>Correct answer</th><th>Marks</th></tr></thead><tbody id="reviewRows"></tbody></table>
+    <h3>Report</h3>
+    <pre id="reportText"></pre>
+    <p class="muted" id="reportFile"></p>
+    <div class="row"><button id="downloadBtn">Download report</button><button class="primary" id="newBtn">New student</button></div>
+    <p class="err" id="resultErr" role="alert"></p>
+  </section>
+</main>
+
+<dialog id="confirmDlg">
+  <form method="dialog">
+    <h3>Submit exam?</h3>
+    <p id="confirmText"></p>
+    <div class="row"><button value="cancel">Keep working</button><button class="primary" value="ok">Submit</button></div>
+  </form>
+</dialog>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="config.js"></script>
+<script src="eventMapper.js"></script>
+<script src="exam.js"></script>
+</body>
+</html>
