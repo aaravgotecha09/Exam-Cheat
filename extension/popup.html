@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Exam monitor</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><b class="brand"><img src="logo.svg" width="22" height="22" alt=""> Exam monitor</b><span id="conn" class="pill">…</span></header>
+  <div id="empty" class="empty">No exam in progress.</div>
+  <main id="main" class="hidden">
+    <section class="grid">
+      <div><label>Student</label><div id="student">–</div></div>
+      <div><label>Paper</label><div id="paper">–</div></div>
+      <div><label>Session</label><div id="session" class="mono">–</div></div>
+      <div><label>Monitoring</label><div id="mon">–</div></div>
+    </section>
+    <section class="score">
+      <div><label>Cheat score</label><div id="score" class="big">0</div></div>
+      <div><label>Events</label><div id="count" class="big">0</div></div>
+      <span id="risk" class="risk NORMAL">NORMAL</span>
+    </section>
+    <section><label>Breakdown</label><ul id="breakdown"></ul></section>
+    <section><label>Recent events</label><ul id="recent"></ul></section>
+    <button id="sim" title="Demo only: no real person detection is running">Simulate multiple person (demo)</button>
+  </main>
+  <button id="open" class="open">Open exam page</button>
+  <p id="err" class="err"></p>
+  <footer><a href="options.html" target="_blank">Settings</a> · scores come from the backend</footer>
+  <script src="config.js"></script>
+  <script src="eventMapper.js"></script>
+  <script src="popup.js"></script>
+</body></html>

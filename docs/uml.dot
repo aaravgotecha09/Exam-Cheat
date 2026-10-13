@@ -1,0 +1,23 @@
+digraph G {
+  rankdir=BT; fontname="Helvetica"; node [shape=record, fontname="Helvetica", fontsize=10, style=filled, fillcolor="#eef2ff"]; edge [fontname="Helvetica", fontsize=9];
+  Scorable [label="{«interface»\nScorable|+ calculateScore(): int}", fillcolor="#fef9c3"];
+  CheatEvent [label="{«abstract»\nCheatEvent|# occurredAt: Instant\l# source: EventSource\l# eventId: String\l|+ calculateScore(): int (abstract)\l+ getEventName(): String (abstract)\l+ getType(): EventType (abstract)\l+ toString(): String\l}", fillcolor="#fde2e4"];
+  TabSwitchEvent [label="{TabSwitchEvent|score = 2}"]; CopyPasteEvent [label="{CopyPasteEvent|score = 3}"]; MultipleLoginEvent [label="{MultipleLoginEvent|score = 4}"]; WindowExitEvent [label="{WindowExitEvent|score = 3}"]; PersonDetectionEvent [label="{PersonDetectionEvent|score = 5 (simulated)}"];
+  Factory [label="{CheatEventFactory|+ create(type, at, source, id): CheatEvent\l}"];
+  ExamMonitor [label="{ExamMonitor|- student: Student\l- paper: TestPaper\l- events: List\<CheatEvent\>\l- answers: Map\<Integer,Character\>\l- marksObtained: int\l|+ recordEvent(CheatEvent)\l+ calculateScore(): int\l+ classifyRisk(): String\l+ getRiskLevel(): RiskLevel\l+ countEvents(String)\l+ countEvents(EventType)\l+ submitAnswer(int, char): boolean\l}", fillcolor="#dcfce7"];
+  Student [label="{Student|- studentId: int\l- name: String\l- examName: String\l|+ Student(int,String,String)\l+ Student(int,String)\l}"];
+  TestPaper [label="{TestPaper|- id: int\l- paperName: String\l- questions: Question[]\l|+ getTotalMarks(): int\l}"];
+  Question [label="{Question|- text: String\l- options: String[]\l- correctOption: char\l- marks: int\l|+ isCorrect(char): boolean\l}"];
+  Report [label="{Report|+ generateReport(): String\l+ saveToFile(Path,String): Path\l}"];
+  RiskLevel [label="{«enum»\nRiskLevel|NORMAL\lSUSPICIOUS\lHIGH_RISK\l|+ fromScore(int): RiskLevel\l}", fillcolor="#fef9c3"];
+  Analytics [label="{ExamAnalytics|+ riskDistribution()\l+ eventTotals()\l+ rankByScore()\l+ averageScore()\l}"];
+  Csv [label="{CsvExporter|+ toCsv(List)\l+ save(List,String)\l}"];
+  Invalid [label="{InvalidChoiceException|«user-defined exception»}", fillcolor="#ffedd5"];
+  PaperBank [label="{PaperBank|+ getPaper(int): TestPaper\l+ all(): List\l}"];
+  CheatEvent -> Scorable [arrowhead=onormal, style=dashed, label="implements"]; ExamMonitor -> Scorable [arrowhead=onormal, style=dashed, label="implements"];
+  TabSwitchEvent -> CheatEvent [arrowhead=onormal, label="extends"]; CopyPasteEvent -> CheatEvent [arrowhead=onormal]; MultipleLoginEvent -> CheatEvent [arrowhead=onormal]; WindowExitEvent -> CheatEvent [arrowhead=onormal]; PersonDetectionEvent -> CheatEvent [arrowhead=onormal];
+  Factory -> CheatEvent [arrowhead=vee, style=dashed, label="creates"];
+  ExamMonitor -> CheatEvent [arrowhead=odiamond, label="aggregation 1..*"]; ExamMonitor -> Student [arrowhead=vee, label="association"]; ExamMonitor -> TestPaper [arrowhead=vee, label="association"];
+  TestPaper -> Question [arrowhead=diamond, label="composition 5"]; Report -> ExamMonitor [arrowhead=vee, label="uses"]; ExamMonitor -> RiskLevel [arrowhead=vee, label="uses"];
+  Analytics -> ExamMonitor [arrowhead=vee, label="uses"]; Csv -> ExamMonitor [arrowhead=vee, label="uses"]; PaperBank -> TestPaper [arrowhead=vee, label="builds"]; ExamMonitor -> Invalid [arrowhead=vee, style=dashed, label="throws"];
+}

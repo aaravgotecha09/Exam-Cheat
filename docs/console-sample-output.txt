@@ -1,0 +1,220 @@
+=== EXAM CHEAT DETECTION SYSTEM (Console) ===
+Enter Student ID: Enter Student Name: 1. Java Programming   2. Data Structures   3. DBMS
+Choose test paper (1-3): 
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Recorded: Tab switch [+2] at 2026-10-13 02:29:18 (Simulated demo action)
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Recorded: Copy/Paste attempt [+3] at 2026-10-13 02:29:18 (Simulated demo action)
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Recorded: Multiple person [+5] at 2026-10-13 02:29:18 (Simulated demo action)
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Q1. Which keyword is used to inherit a class in Java?
+  A. implements
+  B. super
+  C. extends
+  D. inherits
+Your answer (A-D): Correct! +2
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Q2. Which feature is used to achieve runtime polymorphism?
+  A. Method overriding
+  B. Method overloading
+  C. Constructor overloading
+  D. Static binding
+Your answer (A-D): Error: Answer must be A, B, C or D.
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Q2. Which feature is used to achieve runtime polymorphism?
+  A. Method overriding
+  B. Method overloading
+  C. Constructor overloading
+  D. Static binding
+Your answer (A-D): Correct! +2
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Cheat Score: 10  Risk: HIGH RISK
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: ===== EXAM CHEAT DETECTION REPORT =====
+Session ID          : console-1013
+Student ID          : 1013
+Student Name        : Shreya Bhuia
+Exam                : Java Programming
+Session Started     : 2026-10-13 02:29:18
+Session Completed   : 2026-10-13 02:29:18
+Questions Attempted : 2 / 5
+Marks Obtained      : 4 / 10
+Tab Switches        : 1
+Copy/Paste Attempts : 1
+Multiple Logins     : 0
+Window Exits        : 0
+Person Detection    : 1 (simulated in this prototype)
+Cheat Score         : 10
+Risk Level          : HIGH RISK
+----------- Event Log (chronological) -----------
+1. Tab switch at 2026-10-13 02:29:18 (+2) [Simulated demo action]
+2. Copy/Paste attempt at 2026-10-13 02:29:18 (+3) [Simulated demo action]
+3. Multiple person at 2026-10-13 02:29:18 (+5) [Simulated demo action]
+-------------------------------------------------
+Note: browser signals are limited and do not prove cheating. They are indicators for review.
+=================================================
+Report saved to console-reports/ExamReport_1013.txt
+Examine another student? (y/n): Enter Student ID: Enter Student Name: 1. Java Programming   2. Data Structures   3. DBMS
+Choose test paper (1-3): Error: Paper choice must be between 1 and 3.
+1. Java Programming   2. Data Structures   3. DBMS
+Choose test paper (1-3): 
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: Q1. Which SQL command is used to retrieve data from a table?
+  A. SELECT
+  B. INSERT
+  C. UPDATE
+  D. DELETE
+Your answer (A-D): Wrong.
+
+--- MENU ---
+1. Record Tab Switch
+2. Record Copy/Paste Attempt
+3. Record Multiple Login
+4. Record Window Exit
+5. Record Multiple Person Detection (simulated)
+6. View Score
+7. Generate Report
+8. Exit / Finish
+9. Attempt Next Question
+10. Class summary so far
+11. Export CSV
+Enter choice: ===== EXAM CHEAT DETECTION REPORT =====
+Session ID          : console-1019
+Student ID          : 1019
+Student Name        : Aarav Gotecha
+Exam                : DBMS
+Session Started     : 2026-10-13 02:29:18
+Session Completed   : 2026-10-13 02:29:18
+Questions Attempted : 1 / 5
+Marks Obtained      : 0 / 10
+Tab Switches        : 0
+Copy/Paste Attempts : 0
+Multiple Logins     : 0
+Window Exits        : 0
+Person Detection    : 0 (simulated in this prototype)
+Cheat Score         : 0
+Risk Level          : NORMAL
+----------- Event Log (chronological) -----------
+No suspicious events recorded.
+-------------------------------------------------
+Note: browser signals are limited and do not prove cheating. They are indicators for review.
+=================================================
+Report saved to console-reports/ExamReport_1019.txt
+Examine another student? (y/n): ===== CLASS SUMMARY =====
+Students examined   : 2
+Average cheat score : 5.00
+Average marks       : 2.00
+Risk distribution   : NORMAL=1  SUSPICIOUS=0  HIGH RISK=1  
+Event totals        : TAB_SWITCH=1  COPY_PASTE=1  MULTIPLE_LOGIN=0  WINDOW_EXIT=0  MULTIPLE_PERSON=1  
+Ranking (highest cheat score first):
+  1. Shreya Bhuia - score 10 (HIGH RISK)
+  2. Aarav Gotecha - score 0 (NORMAL)
+Summary exported to ExamSummary.csv
+Thank you.
