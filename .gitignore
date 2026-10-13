@@ -1,4 +1,0 @@
-backend/target/
-backend/data/
-backend/reports/*.txt
-node_modules/
